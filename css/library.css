@@ -1,0 +1,915 @@
+@charset "UTF-8";
+
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2016 Daniel Eden
+ */
+
+
+/*css 初始化 */
+
+html,body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset,
+img,
+input,
+button,
+span {
+    border: none;
+    margin: 0;
+    outline-style: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select,
+input {
+    vertical-align: middle;
+}
+
+select,
+input,
+textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+
+/*防止拖动*/
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+
+table {
+    border-collapse: collapse;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+label {
+    font-weight: normal;
+}
+
+
+/*header部分*/
+
+header {
+    width: 100%;
+    background: url(../images/header_01.jpg) no-repeat center top, url(../images/header_02.jpg) repeat center top;
+}
+
+.logo {
+    width: 34%;
+    height: 100%;
+    float: left;
+    margin-top: 22px;
+    text-align: center;
+    height: 67px;
+    background-image: url(../images/logo_02.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.bar {
+    width: 57%;
+    float: left;
+    margin-top: 14px;
+    font: 14px/86px "Microsoft Yahei";
+    padding-left: 6%;
+}
+
+.bar a {
+    float: left;
+    padding-left: 6%;
+    color: #d83737;
+}
+
+.bar a:hover {
+    color: #fd9601;
+    text-decoration: none;
+}
+
+.bar-slide {
+    display: none;
+}
+
+.search {
+    float: left;
+    margin: 30px 0 0 10px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #a8a8a8;
+    background-color: #fff;
+    box-shadow: 1px 2px 6px rgba(150, 150, 150, 0.2) inset;
+    overflow: hidden;
+}
+
+.search input {
+    float: left;
+    background: rgba(0, 0, 0, 0);
+    height: 24px;
+    padding-left: 6px;
+}
+
+.search span {
+    float: right;
+    display: block;
+    width: 31px;
+    height: 24px;
+    background: url(../images/search_03.png) no-repeat center center #e63b3b;
+}
+
+.bar label {
+    float: left;
+    padding-left: 14px;
+    color: #d83737;
+}
+
+.search span:hover {
+    cursor: pointer;
+}
+
+.erwm {
+    float: right;
+    margin-top: 11px;
+}
+
+
+/*nav部分*/
+
+nav {
+    height: 60px;
+    background: url(../images/nav.jpg) no-repeat center center #d82a23;
+    box-shadow: 0px 1px 3px rgba(100, 100, 100, 1);
+}
+
+nav .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav .container .nav-tabs.nav-justified>li>a {
+    color: #fff;
+    font: 20px/56px "Microsoft Yahei";
+    padding: 0 15px;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+}
+
+nav .container .nav-tabs.nav-justified>li.active>a,
+nav .container .nav-tabs.nav-justified>li>a:focus,
+nav .container .nav-tabs.nav-justified>li>a:hover {
+    border: none;
+    border-bottom: 4px solid #f86d14;
+}
+
+
+/*main部分*/
+
+.banner {
+    background: url(../images/header_02.jpg) repeat center center #d82a23;
+    overflow: hidden;
+}
+
+.instruct {
+    height: 90px;
+    margin-top: -24px;
+    background: #f5ede9;
+    border-bottom: 1px solid #e5bfbd;
+}
+
+.instruct .container {
+    height: 100%;
+    background: url(../images/tp_08.jpg) no-repeat 856px bottom;
+    font: 16px/120px "Microsoft Yahei";
+    color: #d83737;
+    text-align: center;
+}
+
+.banner .container {
+    height: 100%;
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.jiansuo_bg {
+    width: 102%;
+    left: -1%;
+    height: 76px;
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.jiansuo {
+    width: 76%;
+    height: 36px;
+    border: 1px solid #6d7061;
+    position: absolute;
+    left: 12%;
+    top: 25%;
+    background: url(../images/search_07.png) no-repeat 12px center rgba(0, 0, 0, 0.6);
+}
+
+.jiansuo input {
+    height: 36px;
+    float: left;
+    background: rgba(255, 255, 255, 0);
+    padding-left: 48px;
+    color: #fff;
+    font: 14px/36px "Microsoft Yahei";
+}
+
+.jiansuo button {
+    float: right;
+    width: 90px;
+    height: 34px;
+    background-color: #d61717;
+    color: #fff;
+    font: 15px/34px "Microsoft Yahei";
+}
+
+
+/*Resources部分*/
+
+.resources article {
+    float: left;
+    width: 70%;
+}
+
+.resources article .article-inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.resources article h2 {
+    margin-top: 8px;
+    font: 24px/48px "方正舒体", "Microsoft Yahei";
+    color: #d83737;
+    word-spacing: 8px;
+}
+
+.resources article h2 span {
+    font: italic 400 18px/48px "Microsoft Yahei";
+    color: #ff9602;
+    padding-left: 8px;
+}
+
+.resourcesList li:first-child {
+    margin-left: 14%;
+}
+
+.resourcesList li {
+    width: 22%px;
+    height: 30px;
+    float: left;
+    margin: 0 2%;
+    font: 16px/30px "Microsoft Yahei";
+    text-align: center;
+}
+
+.resourcesList>li.current {
+    border-radius: 4px;
+    background-color: #d83737;
+}
+
+.resourcesList li a {
+    color: #000;
+}
+
+.resourcesList li.current a {
+    color: #fff;
+    padding: 0 4px;
+}
+
+.resources article .outsourcingList,
+.resources article .selfbuiltList,
+.resources article .trialList {
+    float: left;
+    display: none;
+    font: 14px/26px "Microsoft Yahei";
+    padding: 16px 0 32px;
+}
+
+.resources article .currentList {
+    display: block;
+}
+
+.outsourcingList,
+.selfbuiltList,
+.trialList li a {
+    color: #666;
+}
+
+.resources .currentList li:before {
+    /*列表标题前的小圆点*/
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 50%;
+    position: relative;
+    top: -5px;
+    margin: 0 8px;
+}
+
+.resources aside {
+    float: right;
+    width: 30%;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+}
+
+.resources aside h2 {
+    font: 22px/68px "Microsoft Yahei";
+    color: #fa6511;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.resources aside .row6 {
+    display: block;
+    margin-left: 0;
+}
+
+.resources aside .row2,
+.resources aside .row4 {
+    display: none;
+}
+
+.resources aside .wenku div {
+    width: 128px;
+    height: 54px;
+    border-radius: 4px;
+    margin: 4%;
+}
+
+.resources aside .wenku div:nth-child(1) {
+    background: url(../images/icon_12.png) no-repeat left 10px #fc6e1e;
+}
+
+.resources aside .wenku div:nth-child(2) {
+    background: url(../images/icon_14.png) no-repeat left 10px #f1c12e;
+}
+
+.resources aside .wenku div:nth-child(3) {
+    background: url(../images/icon_18.png) no-repeat left 10px #1a75f1;
+}
+
+.resources aside .wenku div:nth-child(4) {
+    background: url(../images/icon_19.png) no-repeat left 10px #888685;
+}
+
+.resources aside .wenku div:nth-child(5) {
+    background: url(../images/icon_22.png) no-repeat left 10px #e52208;
+}
+
+.resources aside .wenku div:nth-child(6) {
+    background: url(../images/icon_24.png) no-repeat left 10px #b22421;
+}
+
+.resources aside .wenku div a {
+    color: #fff;
+}
+
+.resources aside .wenku div span {
+    display: inline-block;
+    position: relative;
+    left: 42%;
+    top: 11px;
+}
+
+
+/*Special部分*/
+
+.special {
+    background: #f9f9f9;
+}
+
+.special h2 {
+    margin-top: 8px;
+    font: 24px/48px "方正舒体", "Microsoft Yahei";
+    color: #d83737;
+    word-spacing: 8px;
+}
+
+.special h2 span {
+    font: italic 400 18px/48px "Microsoft Yahei";
+    color: #ff9602;
+    padding-left: 8px;
+}
+/*滚图静态开始*/
+.specialList {
+    overflow: hidden;
+}
+
+.specialList .special-lis {
+    padding: 0;
+}
+
+.specialList li {
+    width: 25%;
+    float: left;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    margin: 2% 0 4%;
+}
+
+.specialList li a {
+    width: 100%;
+    height: 100%;
+}
+
+.specialList li img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.special>.container {
+    position: relative;
+}
+.prev,
+.next {
+    width: 26px;
+    height: 34px;
+    background: url(../images/arrow.png) no-repeat left top;
+    position: absolute;
+    top: 54%;
+}
+
+.next {
+    background: url(../images/arrow.png) no-repeat -52px top;
+    left: 100%;
+    margin-left: -3.5%;
+}
+/*滚图静态结束*/
+
+/*轮播图样式开始*/
+#example {
+    width: 100%;
+    margin: 8px auto;
+}
+
+.carousel[data-shift="1"] .carousel-inner > .item {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.carousel .carousel-inner > .item.row {
+    margin: 0;
+}
+
+.carousel .carousel-control {
+    overflow: hidden;
+    background: none;
+    text-shadow: none;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.carousel .carousel-control:before {
+    color: #f00;
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 36px;
+}
+
+.carousel .carousel-control:after {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    content: '';
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    width: 100%;
+}
+
+.carousel .carousel-control.left {
+    left: -8%;
+}
+
+.carousel .carousel-control.left:before {
+    content: '\e079';
+}
+
+.carousel .carousel-control.left:after {
+    right: -100%;
+}
+
+.carousel .carousel-control.right {
+    right: -5%;
+}
+
+.carousel .carousel-control.right:before {
+    content: '\e080';
+}
+
+.carousel .carousel-control.right:after {
+    left: -100%;
+}
+
+ul.row li {
+    padding: 0;
+}
+/*轮播图样式结束*/
+
+/*Communication And Service部分*/
+
+.communication {
+    margin-bottom: 1%;
+}
+
+.communication .container h2 {
+    margin-top: 8px;
+    font: 24px/48px "方正舒体", "Microsoft Yahei";
+    color: #d83737;
+    word-spacing: 8px;
+}
+
+.communication .container:before {
+    content: normal;
+    display: table;
+}
+
+.communication h2 span {
+    font: italic 400 18px/48px "Microsoft Yahei";
+    color: #ff9602;
+    padding-left: 8px;
+}
+
+.commuList {
+    overflow: hidden;
+}
+
+.commuList li {
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+.commuList li .icon {
+    float: left;
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 21px;
+    border: 2px solid #edebf0;
+    background: url(../images/icon_09.png) no-repeat 6px 2px;
+}
+
+.commuList li:nth-child(2) .icon {
+    background: url(../images/icon_09.png) no-repeat -35px 2px;
+}
+
+.commuList li:nth-child(3) .icon {
+    background: url(../images/icon_09.png) no-repeat -76px 2px;
+}
+
+.commuList li:nth-child(4) .icon {
+    background: url(../images/icon_09.png) no-repeat -118px 2px;
+}
+
+.commuList li:nth-child(5) .icon {
+    background: url(../images/icon_09.png) no-repeat -159px 2px;
+}
+
+.commuList li:nth-child(6) .icon {
+    background: url(../images/icon_09.png) no-repeat -200px 2px;
+}
+
+.commuList li:nth-child(7) .icon {
+    background: url(../images/icon_09.png) no-repeat 6px -36px;
+}
+
+.commuList li:nth-child(8) .icon {
+    background: url(../images/icon_09.png) no-repeat -35px -36px;
+}
+
+.commuList li:nth-child(9) .icon {
+    background: url(../images/icon_09.png) no-repeat -79px -36px;
+}
+
+.commuList li .txt {
+    float: left;
+    padding-left: 10px;
+    font: italic 16px/42px "Microsoft Yahei";
+}
+
+
+/*News部分*/
+
+.news {
+    box-shadow: 0px 3px 3px rgba(100, 100, 100, 0.3);
+    background-color: #f9f9f9;
+}
+
+.news h2 {
+    margin-top: 8px;
+    font: 24px/48px "方正舒体", "Microsoft Yahei";
+    color: #d83737;
+    word-spacing: 8px;
+}
+
+.news h2 span {
+    font: italic 400 18px/48px "Microsoft Yahei";
+    color: #ff9602;
+    padding-left: 8px;
+}
+
+.newsMain>article {
+    width: 60%;
+    float: left;
+}
+
+.newsMain>article>ul {
+    margin: 10px 0 0 24px;
+}
+
+.newsMain>article>ul li {
+    margin-bottom: 16px;
+}
+
+.newsMain>article>ul li .mouth {
+    display: inline-block;
+    width: 90px;
+    height: 25px;
+    border: 1px solid #e17338;
+    background: #e17338;
+    text-align: center;
+    color: #fff;
+}
+
+.newsMain>article>ul li .date {
+    display: inline-block;
+    width: 52px;
+    height: 25px;
+    border: 1px solid #e17338;
+    text-align: center;
+    color: #e17338;
+    margin-left: -4px;
+}
+
+.newsMain>article>ul li a {
+    padding-left: 8px;
+}
+
+.newsMain>article .outsourcingList,
+.newsMain>article .selfbuiltList {
+    font: 14px/26px "Microsoft Yahei";
+    padding: 16px 0 32px;
+    display: none;
+}
+
+.newsMain>article .currentList {
+    display: block;
+}
+
+.news article > ul.resourcesList li:first-child {
+    margin-left: 126px;
+}
+
+.newsMain>aside {
+    width: 40%;
+    float: right;
+    margin: 1% auto;
+}
+
+.newsMain>aside img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*footer部分*/
+
+footer {
+    background: #e6e6e6;
+}
+
+h5 {
+    font: bold 16px/48px "Microsoft Yahei";
+    text-align: center;
+    padding-bottom: 6px;
+    color: #333;
+}
+
+.content {
+    text-align: center;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+
+.content span {
+    font: 14px/34px "Microsoft Yahei";
+    color: #555;
+}
+
+.content label {
+    font-weight: 500;
+}
+
+.copyright {
+    font: 12px/55px "Microsoft Yahei";
+    text-align: center;
+    color: #555;
+}
+
+.container {
+    width: 90%;
+}
+
+
+/*——————响应式开始了——————*/
+@media (min-width: 1201px) {
+    .carousel-inner {
+        width: 80%;
+        margin: 1% auto;
+    }
+
+}
+
+@media (min-width: 1091px) and (max-width: 1200px) {
+    .carousel-inner {
+        width: 100%;
+        margin: 1% auto;
+    }
+    .resources article {
+        float: none;
+        width: 100%;
+        margin: 1% 0;
+    }
+    .resources article .article-inner {
+        float: none;
+    }
+    /*aside 特色文库*/
+    .resources aside {
+        float: none;
+        border: 1px solid #e0e0e0;
+        width: 100%;
+        margin: 1% 0;
+    }
+    .next {
+        margin-left: -4%;
+    }
+}
+
+@media (min-width: 897px) and (max-width: 1090px) {
+    .carousel-inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .search {
+        float: right;
+    }
+    .search input {
+        display: none;
+        float: left;
+        background: rgba(0, 0, 0, 0);
+        height: 24px;
+        padding-left: 6px;
+    }
+    .newsMain>article,
+    .newsMain>aside {
+        float: none;
+        width: 90%;
+    }
+    .next {
+        margin-left: -4.5%;
+    }
+}
+
+@media (max-width: 896px) {
+    .btn-default {
+        color: #d83737;
+        background: rgba(0, 0, 0, 0);
+        border-color: #d83737;
+    }
+    .btn-default:hover {
+        color: #fd9601;
+        background: rgba(0, 0, 0, 0);
+        border-color: #fd9601;
+    }
+    nav .container {
+        width: 90%;
+    }
+    nav .container .nav-tabs.nav-justified>li>a {
+        font: 16px/56px "Microsoft Yahei";
+        padding: 0 8px;
+    }
+    nav .container .nav-tabs.nav-justified>li.active>a,
+    nav .container .nav-tabs.nav-justified>li>a:focus,
+    nav .container .nav-tabs.nav-justified>li>a:hover {
+        border: none;
+    }
+    .nav-tabs.nav-justified>li {
+        display: table-cell;
+        width: 1%;
+    }
+    .resources aside .wenku div {
+        width: 128px;
+        height: 54px;
+        border-radius: 4px;
+        margin: 2% 4.6%;
+    }
+    .resources aside h2 {
+        font: 22px/40px "Microsoft Yahei";
+    }
+    .resources article .outsourcingList,
+    .resources article .selfbuiltList,
+    .resources article .trialList {
+
+    }
+    .prev,
+    .next {
+        left: 2%;
+    }
+    .next {
+        background: url(../images/arrow.png) no-repeat -52px top;
+        left: 100%;
+        margin-left: -6%;
+    }
+    .newsMain>article,
+    .newsMain>aside {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .bar {
+        display: none;
+    }
+    .bar-slide {
+        display: inline-block;
+        float: right;
+        margin-top: 4%;
+    }
+}
